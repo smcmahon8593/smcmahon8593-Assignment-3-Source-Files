@@ -48,19 +48,20 @@
 						<input type="text" id="lname" name="lname"><br><br>
 						<label for="address">Address:</label>
 						<input type="text" id="address" name="address"><br><br>
-						<label for="province">Province:</label>
-						<input type="text" id="province" name="province"><br><br>
+						<label for="province">Province:</labels>
+						<input type="text" id="province" name="province" placeholder="2-character code"><br><br>
 						<label for="postalCode">Postal Code:</label>
-						<input type="text" id="postalCode" name="postalCode"><br><br>
+						<input type="text" id="postalCode" name="postalCode" placeholder="A1B2C3"><br><br>
 						<label for="phoneNumber">Phone Number:</label>
-						<input type="text" id="phoneNumber" name="phoneNumber"><br><br>
+						<input type="text" id="phoneNumber" name="phoneNumber" pattern=“\d{3}[\-]\d{3}[\-]\d{4}” placeholder="999-999-9999"title="Enter your phone number in the following format: 999-999-9999">
+						<br></br>
 					</fieldset>	
 					
 					<fieldset>
 						<legend>Ordering Information:</legend>
 						<label for="events">Event:</label>
 						<select name="events" id="events">
-						  <option value="Cookie Decoration Contest">Cookie Decoration Contest"</option>
+						  <option value="Cookie Decoration Contest">Cookie Decoration Contest</option>
 						  <option value="Tree Decoration Contest">Tree Decoration Contest</option>
 						  <option value="Gift of Light Ride-Along">Gift of Light Ride-Along</option>
 						  <option value="Breakfast with Santa">Breakfast with Santa</option>
@@ -76,7 +77,7 @@
 						</select>
 						<br></br>						
 						<label for="numberOfTickets">Number of Tickets:</label>
-						<input type="text" id="numberOfTickets" name="numberOfTickets"><br><br>
+						<input type="text" id="numberOfTickets" name="numberOfTickets" placeholder="Number of single tickets"><br><br>
 					</fieldset>
 
 					<fieldset>
@@ -90,10 +91,23 @@
 						
 					<fieldset>
 						<legend>Credit Card Information:</legend>
+						<label for="cardType">Card Type:</label>
+						<select name="cardType" id="cardType">
+						  <option value="visa">Visa</option>
+						  <option value="mastercard">Mastercard</option>
+						  <option value="discover">Discover</option>
+						  						  
+						</select>
+						<br></br>
+						<label for="cardNumber">Card Number:</label>
+						<input type="text" id="cardNumber" name="cardNumber">
+					
+					
 					</fieldset>
 					<fieldset>
 						<legend>Submit Your Order:</legend>
 						<input type="submit" value="submit">
+						<input type="reset" value="reset"> 
 					</fieldset>
 					
 				</form>
