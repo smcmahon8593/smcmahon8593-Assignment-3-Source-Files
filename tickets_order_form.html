@@ -38,7 +38,7 @@
 			<main>
 				<h1>Order Event Tickets</h1>
 				<form action="place_order.html" method="post"> 
-					<fieldset>
+					<fieldset id="text">
 						<legend>Member Information:</legend>	
 						<label for="email">Email:</label>
 						<input type="email" id="email" name="email" required><br><br>
@@ -48,18 +48,18 @@
 						<input type="text" id="lname" name="lname"required><br><br>
 						<label for="address">Address:</label>
 						<input type="text" id="address" name="address"><br><br>
-						<label for="city">City:</labels>
+						<label for="city">City:</label>
 						<input type="text" id="city" name="city" required><br><br>
-						<label for="province">Province: </labels>
+						<label for="province">Province: </label>
 						<input type="text" id="province" name="province" maxlength="2" placeholder="2-character code" required><br><br>
 						<label for="postalCode">Postal Code:</label>
 						<input type="text" id="postalCode" name="postalCode" placeholder="A1B2C3" maxlength="6" minlengh="6" required><br><br>
 						<label for="phoneNumber">Phone Number:</label>
-						<input type="telephone" id="phoneNumber" name="phoneNumber" pattern=“\d{3}[\-]\d{3}[\-]\d{4}” placeholder="999-999-9999"title="Enter your phone number in the following format: 999-999-9999" required>
+						<input type="number" id="phoneNumber" name="phoneNumber" pattern=“\d{3}[\-]\d{3}[\-]\d{4}” placeholder="999-999-9999"title="Enter your phone number in the following format: 999-999-9999" required>
 						<br></br>
 					</fieldset>	
 					
-					<fieldset>
+					<fieldset id="text">
 						<legend>Ordering Information:</legend>
 						<label for="events">Event:</label>
 						<select name="events" id="events">
@@ -82,16 +82,14 @@
 						<input type="number" id="numberOfTickets" name="numberOfTickets" placeholder="Number of single tickets"><br><br>
 					</fieldset>
 
-					<fieldset>
+					<fieldset id="radioButtons">
 						<legend>Payment Method:</legend>
-						<input type="radio" id="billMe" name="paymentMethod" value="billMe">
-						<label for="billMe">Bill Me</label>
-						<input type="radio" id="css" name="paymentMethod" value="creditCard">
-						<label for="creditCard">Credit Card</label><br>
-		
+						<label id="payment_methods"><input type="radio" name="myCheckbox" checked> Bill me</label>
+						<label id="payment_methods"><input type="radio" name="myCheckbox"> Credit Card</label>
+						
 					</fieldset>
 						
-					<fieldset>
+					<fieldset id="text">
 						<legend>Credit Card Information:</legend>
 						<label for="cardType">Card Type:</label>
 						<select name="cardType" id="cardType">
@@ -103,27 +101,11 @@
 						<br></br>
 						
 						<label for="cardNumber">Card Number:</label>
-						<input type="number" id="cardNumber" name="cardNumber" minlength="16" maxlength="16"><br>
+						<input type="number" id="cardNumber" name="cardNumber" minlength="16" maxlength="16"><br><br>
 						<label for="expireDate">Expiration Date:</label>
 						
-						<select id="month" name="month">
-							<option>month</option>
-							<option value="january">January</option>
-							<option value="february">February</option>
-							<option value="march">March</option>
-							<option value="april">April</option>
-							<option value="may">May</option>
-							<option value="june">June</option>
-							<option value="july">July</option>
-							<option value="august">August</option>
-							<option value="september">September</option>
-							<option value="october">October</option>
-							<option value="november">November</option>
-							<option value="december">December</option>
-						</select>
-
+						
 						<select id="year" name="year">
-							<option>year</option>
 							<option value="2021">2021</option>
 							<option value="2022">2022</option>
 							<option value="2023">2023</option>
@@ -132,16 +114,32 @@
 							<option value="2026">2026</option>
 							<option value="2027">2027</option>
 						</select>
+						<select id="month" name="month">
+							<option value="January">January</option>
+							<option value="February">February</option>
+							<option value="March">March</option>
+							<option value="April">April</option>
+							<option value="May">May</option>
+							<option value="June">June</option>
+							<option value="July">July</option>
+							<option value="August">August</option>
+							<option value="September">September</option>
+							<option value="October">October</option>
+							<option value="November">November</option>
+							<option value="December">December</option>
+						</select>
+
+						
 
 
 
 
 					
 					</fieldset>
-					<fieldset>
+					<fieldset id="submitField">
 						<legend>Submit Your Order:</legend>
-						<input type="submit" value="Submit">
-						<input type="reset" value="Reset Fields"> 
+						<input id="submitButtons" type="submit" value="Submit">
+						<input id="submitButtons" type="reset" value="Reset Fields"> 
 					</fieldset>
 					
 				</form>

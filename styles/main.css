@@ -182,3 +182,85 @@ footer p {
 	font-size: 80%;
 	text-align: center;
 }
+
+#text{
+	border-color: grey;
+}
+
+fieldset{
+	border-color: grey;
+	padding-right:200px;
+}
+
+legend{
+	margin-bottom: 10px;
+	font-weight: bold;
+	color: grey;
+	font-size: 85%;
+}
+
+label{
+	display: inline-block;
+	font-size: 90%;
+	width:200px;
+	text-align:right;
+
+
+	
+}
+input{
+	font-size: 90%;
+	width: 15em;
+	float: right;
+}
+select{
+	font-size: 90%;
+	float:right;
+}
+
+:required{
+	border-color:orange;
+	border-style: solid;
+	border-width: 2p;
+	
+}
+
+:valid{
+	border-color:black;
+	border-style: solid;
+	border-width:1px;
+}
+
+input[type="radio"]{
+	width: auto;
+	float:none;
+	
+}
+
+#payment_method label{
+	float:none;
+	color: grey;
+	border-color: grey;
+	
+}
+
+#radioButtons{
+	border-color: grey;
+}
+
+#submit {
+	border-color: grey;
+	
+}
+
+#submitButtons{
+	max-width: 10em;
+	float: center;
+}
+
+#submitFields{
+	border-color: grey;
+	padding-right: 200px;
+	text-align: center;
+	float:none;
+}
